@@ -100,7 +100,7 @@ final class LoadingView: UIView {
 extension UIView {
     
     func showLoading(style: LoadingView.ActivityIndicatorStyle = .medium,
-                               backgroundColor: UIColor = .white) {
+                               backgroundColor: UIColor = .systemBackground) {
         let loadingView = LoadingView(activityIndicatorStyle: style,
                                       backGroundColor: backgroundColor,
                                       frame: .zero)

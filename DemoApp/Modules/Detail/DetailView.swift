@@ -87,7 +87,7 @@ final class DetailView: UIViewController, HaveViewModelProtocol {
     }
     
     private func setupTableView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         tableView.dataSource = self
         tableView.delegate = self
         

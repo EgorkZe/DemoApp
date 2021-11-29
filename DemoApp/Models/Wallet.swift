@@ -8,9 +8,9 @@
 import Foundation
 
 struct Wallet: Decodable {
-    let id: String
-    let walletName: String
-    let balance: String
+    let id: String?
+    let walletName: String?
+    let balance: String?
     
     enum CodingKeys: String, CodingKey {
         case walletName = "wallet_name"
@@ -20,8 +20,8 @@ struct Wallet: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try! container.decode(String.self, forKey: .id)
-        self.walletName = try! container.decode(String.self, forKey: .walletName)
-        self.balance = try! container.decode(String.self, forKey: .balance)
+        self.id = try? container.decode(String.self, forKey: .id)
+        self.walletName = try? container.decode(String.self, forKey: .walletName)
+        self.balance = try? container.decode(String.self, forKey: .balance)
     }
 }

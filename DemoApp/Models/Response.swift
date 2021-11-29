@@ -8,7 +8,7 @@
 import Foundation
 
 struct TransactionsResponse: Decodable {
-    var transactions: [Transaction] = []
+    var transactions: [Transaction]? = []
     
     enum CodingKeys: String, CodingKey {
         case transactions = "histories"
@@ -20,12 +20,12 @@ struct TransactionsResponse: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.transactions = try! container.decode([Transaction].self, forKey: .transactions)
+        self.transactions = try container.decode([Transaction].self, forKey: .transactions)
     }
 }
 
 struct WalletsResponse: Decodable {
-    var wallets: [Wallet] = []
+    var wallets: [Wallet]? = []
     
     enum CodingKeys: String, CodingKey {
         case wallets = "wallets"
@@ -37,7 +37,7 @@ struct WalletsResponse: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.wallets = try! container.decode([Wallet].self, forKey: .wallets)
+        self.wallets = try container.decode([Wallet].self, forKey: .wallets)
     }
 }
 

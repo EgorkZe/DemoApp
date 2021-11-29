@@ -11,11 +11,11 @@ final class WalletCellViewModel: AnyViewModelProtocol {
     let wallet: Wallet
     
     var name: String {
-        return "\(wallet.walletName)"
+        return "\(wallet.walletName ?? "")"
     }
     
     var ballance: String {
-        return "\(wallet.balance)"
+        return "\(wallet.balance ?? "")"
     }
     init(wallet: Wallet) {
         self.wallet = wallet
