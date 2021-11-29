@@ -7,4 +7,9 @@ IMPORTANT THINGS:
 - Please use this link to manipulate mock data - https://www.mockachino.com/spaces/4851c32b-ab3d-4f. For example if you want see error in the app you can change "HTTP Response Status Code" to 400.
 - Minimum ios version is 13.0
 - I make system of two not depending on each other requests in the app. So if one request will be broken another one will be loaded. So it is allow to user see data of one of request and load again another. But sometimes it is ok to use depending requests, so for this goal i would use combine this zip technique.
+- I left comments to some parts of code for more comfortable reading.
 
+If you have any questions feel free to ask me:
+* telegram - @egor_dev
+* email - egorkze@gmail.com
+* skype - egorkze
